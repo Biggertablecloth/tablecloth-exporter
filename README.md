@@ -1,3 +1,5 @@
+# [Loom Walkthrough](https://www.loom.com/share/10ae1efb0a224a579b62452b5325756e) 
+---
 # Mac OSX Instructions
 
 ## One time setup
