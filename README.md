@@ -55,6 +55,6 @@ Next, another finder window will open. Navigate to your destination Google Drive
 Now, allow the program to run. It may take up to 10 hours for ~863 dashboards. 
 
 Once the PDF generation is finished, you may want to update records in Airtable according to your changes. If this is the case open the following link:
-https://colab.research.google.com/drive/1GkQTL107D9MHyQhVInubyPsH5-jdhRfX?authuser=2#scrollTo=y9lPmqzLIQxi
+https://colab.research.google.com/drive/1GkQTL107D9MHyQhVInubyPsH5-jdhRfX?authuser=1
 
 and follow the instructiosn there to generate a full backup.
