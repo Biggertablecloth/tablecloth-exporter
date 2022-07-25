@@ -25,7 +25,7 @@ Run the following command in terminal:
 
 Install selenium first with the following command:
 ```
-pip3 install selenium tqdm tkinter
+pip3 install tqdm tkinter selenium==4.2.0
 ```
 
 Install chromedriver with the following commands:
