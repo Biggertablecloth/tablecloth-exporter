@@ -16,7 +16,7 @@ import getpass
 driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get("https://login.tablecloth.io/")
 
-username, password = driver.find_elements_by_tag_name('input')
+username, password = driver.find_elements(By.TAG_NAME, 'input')
 
 print('Please write your Tablecloth.io email and password. This information is deleted immediately by the script.')
 Tk().withdraw()
@@ -28,7 +28,7 @@ password.send_keys(password_txt)
 
 del username_txt, password_txt
 
-sign_in_button = driver.find_element_by_xpath('/html/body/div[1]/div/div/div/div[2]/button/span[1]').click()
+sign_in_button = driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/button/span[1]').click()
 
 def wait_for_element(xpath):
     try:
@@ -43,7 +43,7 @@ def wait_for_element(xpath):
         print('time out occured')
 
 wait_for_element('/html/body/div[1]/div/header/div/div[2]/button[2]')
-driver.find_element_by_xpath('/html/body/div[1]/div/header/div/div[2]/button[2]').click()
+driver.find_element(By.XPATH, '/html/body/div[1]/div/header/div/div[2]/button[2]').click()
 
 time.sleep(10)
 
@@ -67,11 +67,11 @@ for dashboard_id in tqdm(dashboard_ids, desc='Progress'):
 
             driver.get(f'https://data.tablecloth.io/infographics/{dashboard_id}')
             time.sleep(4)
-            driver.find_element_by_class_name("designer-box__more-button").click()
+            driver.find_element(By.CLASS_NAME, "designer-box__more-button").click()
             time.sleep(4)
-            driver.find_element_by_xpath("//*[contains(text(), 'Share & export')]").click()
+            driver.find_element(By.XPATH, "//*[contains(text(), 'Share & export')]").click()
             time.sleep(4)
-            driver.find_element_by_xpath("//*[contains(text(), 'Download PDF')]").click()
+            driver.find_element(By.XPATH, "//*[contains(text(), 'Download PDF')]").click()
             time.sleep(15)
             title = driver.title.replace(' - The Data Center', '').replace('/', '_')
             shutil.move(os.path.join(download_folder, title + '.pdf'),
